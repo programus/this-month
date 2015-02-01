@@ -1,0 +1,4 @@
+/* Display name and description for this extension. */
+"CFBundleDisplayName" = "本月";
+"com.apple.notificationcenter.widget.description" = "显示本月月历";
+
