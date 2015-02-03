@@ -12,8 +12,31 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="328" height="242"/>
-            <point key="canvasLocation" x="604" y="517"/>
+            <rect key="frame" x="0.0" y="0.0" width="139" height="148"/>
+            <subviews>
+                <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zlp-A5-oPH">
+                    <rect key="frame" x="0.0" y="0.0" width="139" height="148"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="148" id="1so-0Z-nVL"/>
+                    </constraints>
+                    <datePickerCell key="cell" alignment="left" datePickerStyle="clockAndCalendar" id="ZXX-Mm-90I">
+                        <font key="font" metaFont="system"/>
+                        <date key="date" timeIntervalSinceReferenceDate="-596102400">
+                            <!--1982-02-10 16:00:00 +0000-->
+                        </date>
+                        <color key="backgroundColor" red="0.92281460107214341" green="0.97593718182614519" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                    </datePickerCell>
+                </datePicker>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zlp-A5-oPH" secondAttribute="trailing" id="NGb-mt-sHV"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zlp-A5-oPH" secondAttribute="bottom" id="QhF-Sz-dGO"/>
+                <constraint firstItem="zlp-A5-oPH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="kas-KU-8SI"/>
+                <constraint firstItem="zlp-A5-oPH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Hz6-mo-xeY" secondAttribute="top" id="mfm-78-o53"/>
+                <constraint firstAttribute="centerX" secondItem="zlp-A5-oPH" secondAttribute="centerX" id="zA1-Z5-SXV"/>
+            </constraints>
+            <point key="canvasLocation" x="509.5" y="492"/>
         </customView>
     </objects>
 </document>

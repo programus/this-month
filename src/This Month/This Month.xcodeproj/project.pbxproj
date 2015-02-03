@@ -163,6 +163,7 @@
 		B657F12C1A7E1EB50007B8D4 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				B657F14B1A7E4BE80007B8D4 /* Models */,
 				B657F1331A7E1EB50007B8D4 /* TodayViewController.swift */,
 				B657F1351A7E1EB50007B8D4 /* TodayViewController.xib */,
 				B657F12D1A7E1EB50007B8D4 /* Supporting Files */,
@@ -178,6 +179,13 @@
 				B657F1301A7E1EB50007B8D4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B657F14B1A7E4BE80007B8D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -555,6 +563,7 @@
 				B657F1201A7E19A30007B8D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B657F1211A7E19A30007B8D4 /* Build configuration list for PBXNativeTarget "This MonthTests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +572,7 @@
 				B657F1231A7E19A30007B8D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B657F13A1A7E1EB50007B8D4 /* Build configuration list for PBXNativeTarget "Widget" */ = {
 			isa = XCConfigurationList;
@@ -571,6 +581,7 @@
 				B657F13C1A7E1EB50007B8D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
