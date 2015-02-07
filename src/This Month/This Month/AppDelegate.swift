@@ -22,6 +22,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
+    func applicationWillFinishLaunching(notification: NSNotification) {
+        NSApplication.sharedApplication().terminate(self)
+    }
 
 }
 
