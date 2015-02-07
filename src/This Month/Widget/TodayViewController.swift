@@ -11,6 +11,8 @@ import NotificationCenter
 
 class TodayViewController: NSViewController, NCWidgetProviding {
     
+    @IBOutlet weak var datePickerCell: NSDatePickerCell!
+    
     override var nibName: String? {
         return "TodayViewController"
     }
@@ -19,7 +21,19 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         // Update your data and prepare for a snapshot. Call completion handler when you are done
         // with NoData if nothing has changed or NewData if there is new data since the last
         // time we called you
-        completionHandler(.NewData)
+        var now = NSDate()
+        var needRefresh = true
+        if let cal = NSCalendar(calendarIdentifier: NSGregorianCalendar) {
+            var nowComp = cal.components(NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitDay, fromDate: now)
+            var dispComp = cal.components(NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitDay, fromDate: self.datePickerCell.dateValue)
+            if nowComp == dispComp {
+                needRefresh = nowComp.year != dispComp.year || nowComp.month != dispComp.month || nowComp.day != dispComp.day
+            }
+            if needRefresh {
+                self.datePickerCell.dateValue = now
+            }
+        }
+        completionHandler(needRefresh ? .NewData : .NoData)
     }
 
 }
